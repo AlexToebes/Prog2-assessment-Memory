@@ -1,5 +1,4 @@
 <?import com.alextoebes.memorygame.view.BoardPane?>
 <?import javafx.scene.text.Text?>
-<BoardPane fx:controller="com.alextoebes.memorygame.controller.BoardController" xmlns:fx="http://javafx.com/fxml">
-    <Text text="test"/>
+<BoardPane fx:controller="com.alextoebes.memorygame.controller.BoardController" xmlns:fx="http://javafx.com/fxml" fx:id="board">
 </BoardPane>
