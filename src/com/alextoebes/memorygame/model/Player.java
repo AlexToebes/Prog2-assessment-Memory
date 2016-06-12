@@ -1,4 +1,4 @@
-package memoryGame.model;
+package com.alextoebes.memorygame.model;
 
 import java.util.*;
 
