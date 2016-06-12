@@ -2,5 +2,5 @@ package memoryGame.model;
 
 import java.util.Observable;
 
-public class CardSet {
+public class CardSet extends Observable {
 }

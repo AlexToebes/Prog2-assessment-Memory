@@ -5,7 +5,7 @@ import java.util.Observable;
 /**
  * 
  */
-public class Game {
+public class Game extends Observable {
 
     /**
      * Default constructor

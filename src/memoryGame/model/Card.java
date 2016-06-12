@@ -2,7 +2,7 @@ package memoryGame.model;
 
 import java.util.Observable;
 
-public class Card {
+public class Card extends Observable{
 
     /**
      * Default constructor

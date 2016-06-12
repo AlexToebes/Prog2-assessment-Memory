@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 
  */
-public class Player {
+public class Player extends Observable{
 
     /**
      * Default constructor
