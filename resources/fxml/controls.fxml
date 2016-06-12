@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.HBox?>
 <VBox fx:controller="com.alextoebes.memorygame.controller.ControlsController" xmlns:fx="http://javafx.com/fxml">
     <HBox>
-        <TextField fx:id="player1Field" text="Player 1"/>
+        <TextField styleClass="playerName" fx:id="player1Field" text="Player 1"/>
         <HBox fx:id="player1Score" />
     </HBox>
     <HBox>
-        <TextField fx:id="player2Field" text="Player 2"/>
+        <TextField styleClass="playerName" fx:id="player2Field" text="Player 2"/>
         <HBox fx:id="player2Score" />
     </HBox>
 </VBox>

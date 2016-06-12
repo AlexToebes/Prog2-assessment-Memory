@@ -11,3 +11,11 @@
     -fx-border-color: red;
     -fx-highlight-fill: none;
 }
+
+#controls .playerName {
+    -fx-highlight-fill: none;
+}
+
+#controls .playerName.active{
+    -fx-border-color: red;
+}
