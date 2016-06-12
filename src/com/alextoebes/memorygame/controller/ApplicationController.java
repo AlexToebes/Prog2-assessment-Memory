@@ -21,6 +21,8 @@ public class ApplicationController extends Controller {
         super.initialize(location, resources);
         menuBarController.setParent(this);
         gameController.setParent(this);
+
+        this.gameController.startNewGame();
     }
 }
 

@@ -13,7 +13,11 @@ public class Game extends Observable {
     public Game() {
     }
 
-
+    /**
+     * Load Savegame
+     */
+    public static Game fromSave() {
+    }
 
 
 
