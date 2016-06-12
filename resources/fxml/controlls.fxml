@@ -1,0 +1,7 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<VBox>
+    <Text text="test"/>
+    <Button onAction="#buttonClicked" text="Test"/>
+</VBox>

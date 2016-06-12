@@ -1,0 +1,5 @@
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml">
+    <fx:include source="menu.fxml"/>
+    <fx:include source="game.fxml"/>
+</VBox>
