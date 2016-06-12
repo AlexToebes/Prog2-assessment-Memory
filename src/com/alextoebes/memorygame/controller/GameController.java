@@ -1,4 +1,4 @@
-package memoryGame.controller;
+package com.alextoebes.memorygame.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;

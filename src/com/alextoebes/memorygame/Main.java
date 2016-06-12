@@ -1,4 +1,4 @@
-package memoryGame;
+package com.alextoebes.memorygame;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
