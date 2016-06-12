@@ -1,5 +1,5 @@
-<?import com.alextoebes.memorygame.view.Container?>
-<Container fx:controller="com.alextoebes.memorygame.controller.ApplicationController" xmlns:fx="http://javafx.com/fxml" stylesheets="/css/style.css">
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:controller="com.alextoebes.memorygame.controller.ApplicationController" xmlns:fx="http://javafx.com/fxml" stylesheets="/css/style.css">
     <top>
         <fx:include source="menuBar.fxml" fx:id="menuBar"/>
     </top>
@@ -8,4 +8,4 @@
         <fx:include source="game.fxml" fx:id="game"/>
     </center>
 
-</Container>
+</BorderPane>

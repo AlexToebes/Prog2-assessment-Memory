@@ -1,4 +1,3 @@
-<?import com.alextoebes.memorygame.view.BoardPane?>
-<?import javafx.scene.text.Text?>
-<BoardPane fx:controller="com.alextoebes.memorygame.controller.BoardController" xmlns:fx="http://javafx.com/fxml">
-</BoardPane>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:controller="com.alextoebes.memorygame.controller.BoardController" xmlns:fx="http://javafx.com/fxml">
+</AnchorPane>
