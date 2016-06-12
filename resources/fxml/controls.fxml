@@ -4,7 +4,7 @@
 <?import javafx.scene.control.TextInputControl?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
-<VBox fx:controller="com.alextoebes.memorygame.controller.ControlsController" xmlns:fx="http://javafx.com/fxml" fx:id="controls">
+<VBox fx:controller="com.alextoebes.memorygame.controller.ControlsController" xmlns:fx="http://javafx.com/fxml">
     <HBox>
         <TextField fx:id="player1Field" text="Player 1"/>
         <HBox fx:id="player1Score" />
