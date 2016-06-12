@@ -12,15 +12,15 @@ import java.util.ResourceBundle;
  */
 public class ApplicationController extends Controller {
     @FXML private MenuBar menuBar;
-    @FXML private BorderPane content;
+    @FXML private BorderPane game;
     @FXML private MenuBarController menuBarController;
-    @FXML private GameController contentController;
+    @FXML private GameController gameController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         super.initialize(location, resources);
         menuBarController.setParent(this);
-        contentController.setParent(this);
+        gameController.setParent(this);
     }
 }
 

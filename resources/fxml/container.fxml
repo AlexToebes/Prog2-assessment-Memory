@@ -5,7 +5,7 @@
     </top>
 
     <center>
-        <fx:include source="game.fxml" fx:id="content"/>
+        <fx:include source="game.fxml" fx:id="game"/>
     </center>
 
 </Container>
