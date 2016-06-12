@@ -1,7 +1,10 @@
-<?import javafx.scene.layout.VBox?>
-<VBox fx:controller="com.alextoebes.memorygame.controller.GameController"
-      stylesheets="/css/style.css"
-      xmlns:fx="http://javafx.com/fxml" alignment="center">
-    <fx:include source="board.fxml"/>
-    <fx:include source="controls.fxml"/>
-</VBox>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:controller="com.alextoebes.memorygame.controller.GameController"
+            xmlns:fx="http://javafx.com/fxml" fx:id="game">
+    <center>
+        <fx:include source="board.fxml"/>
+    </center>
+    <bottom>
+        <fx:include source="controls.fxml"/>
+    </bottom>
+</BorderPane>

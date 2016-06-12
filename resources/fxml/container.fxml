@@ -1,5 +1,11 @@
-<?import javafx.scene.layout.VBox?>
-<VBox xmlns:fx="http://javafx.com/fxml">
-    <fx:include source="menu.fxml"/>
-    <fx:include source="game.fxml"/>
-</VBox>
+<?import com.alextoebes.memorygame.view.Container?>
+<Container fx:controller="com.alextoebes.memorygame.controller.ApplicationController" fx:id="container" xmlns:fx="http://javafx.com/fxml" stylesheets="/css/style.css">
+    <top>
+        <fx:include source="menuBar.fxml" fx:id="menuBar"/>
+    </top>
+
+    <center>
+        <fx:include source="game.fxml" fx:id="content"/>
+    </center>
+
+</Container>
