@@ -1,5 +1,5 @@
 <?import javafx.scene.layout.VBox?>
-<VBox fx:controller="memoryGame.controller.GameController"
+<VBox fx:controller="com.alextoebes.memorygame.controller.GameController"
       stylesheets="/css/style.css"
       xmlns:fx="http://javafx.com/fxml" alignment="center">
     <fx:include source="board.fxml"/>

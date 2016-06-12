@@ -1,7 +1,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Button?>
-<VBox>
+<VBox fx:controller="com.alextoebes.memorygame.controller.ControlsController" xmlns:fx="http://javafx.com/fxml">
     <Text text="test"/>
     <Button onAction="#buttonClicked" text="Test"/>
 </VBox>
