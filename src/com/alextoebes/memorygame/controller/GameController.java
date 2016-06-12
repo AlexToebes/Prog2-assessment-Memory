@@ -1,15 +1,7 @@
 package com.alextoebes.memorygame.controller;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class GameController implements Initializable {
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
+/**
+ * Created by alextoebes on 12/06/16.
+ */
+public class GameController extends Controller {
 }
