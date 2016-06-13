@@ -4,7 +4,9 @@ import com.alextoebes.memorygame.model.Card;
 import com.alextoebes.memorygame.model.Game;
 import com.alextoebes.memorygame.view.CardPane;
 import javafx.fxml.FXML;
+import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
@@ -15,8 +17,6 @@ import java.util.ResourceBundle;
  * Created by alextoebes on 12/06/16.
  */
 public class GameController extends Controller {
-    @FXML private StackPane board;
-    @FXML private VBox controls;
     @FXML private BoardController boardController;
     @FXML private ControlsController controlsController;
     private Game game;

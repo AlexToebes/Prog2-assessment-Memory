@@ -1,10 +1,10 @@
 <?import javafx.scene.layout.BorderPane?>
 <BorderPane fx:controller="com.alextoebes.memorygame.controller.GameController"
             xmlns:fx="http://javafx.com/fxml">
-    <center>
+    <top>
         <fx:include source="board.fxml" fx:id="board"/>
-    </center>
-    <bottom>
+    </top>
+    <center>
         <fx:include source="controls.fxml" fx:id="controls"/>
-    </bottom>
+    </center>
 </BorderPane>

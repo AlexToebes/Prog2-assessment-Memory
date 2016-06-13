@@ -1,7 +1,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
-<VBox fx:controller="com.alextoebes.memorygame.controller.ControlsController" xmlns:fx="http://javafx.com/fxml">
+<VBox fx:controller="com.alextoebes.memorygame.controller.ControlsController" xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
     <HBox>
         <TextField styleClass="playerName" fx:id="player1Field" text="Player 1"/>
         <HBox fx:id="player1Score" />

@@ -20,7 +20,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         BorderPane root = FXMLLoader.load(getClass().getResource("/fxml/container.fxml"));
         primaryStage.setTitle("Memory");
-        primaryStage.setScene(new Scene(root, 600, 700));
+        primaryStage.setScene(new Scene(root, 600, 750));
         primaryStage.setResizable(false);
         primaryStage.show();
         this.triggerDocumentReady();

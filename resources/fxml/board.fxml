@@ -1,3 +1,8 @@
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.layout.StackPane?>
-<StackPane fx:controller="com.alextoebes.memorygame.controller.BoardController" xmlns:fx="http://javafx.com/fxml" fx:id="board">
+<StackPane fx:controller="com.alextoebes.memorygame.controller.BoardController" xmlns:fx="http://javafx.com/fxml">
+    <Group fx:id="board">
+
+    </Group>
 </StackPane>
