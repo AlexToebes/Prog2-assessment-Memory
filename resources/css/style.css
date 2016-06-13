@@ -19,3 +19,18 @@
 #controls .playerName.active{
     -fx-border-color: red;
 }
+
+.card-pane {
+    -fx-max-width: 70px;
+    -fx-max-height: 70px;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+}
+
+.card-pane .button {
+    -fx-background-color: transparent;
+}
+
+.card-1 {
+    -fx-image: url("/images/image01.jpg");
+}

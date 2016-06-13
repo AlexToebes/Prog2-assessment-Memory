@@ -7,19 +7,26 @@ import java.util.Observable;
  */
 public class Game extends Observable {
 
+    private Card[] cards;
+    private int cardsInCardSet = 2;
+    private int cartSetsInGame = 18;
+    private Player[] players;
+    private Player turn;
+
     /**
      * Default constructor
      */
     public Game() {
+        this.players = new Player[]{new Player(), new Player()};
+        this.cards = Card.getCompleteGame(cartSetsInGame, cardsInCardSet);
     }
 
     /**
      * Load Savegame
      */
     public static Game fromSave() {
+        return new Game();
     }
-
-
 
     /**
      * @param card1 
@@ -38,4 +45,7 @@ public class Game extends Observable {
         // TODO implement here
     }
 
+    public Card[] getCards() {
+        return cards;
+    }
 }
