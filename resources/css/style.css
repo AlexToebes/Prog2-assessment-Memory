@@ -1,14 +1,13 @@
-#board{
+#board {
     -fx-background-color: #555555;
 }
 
-#controls{
+#controls {
     -fx-padding: 10px;
     -fx-spacing: 10px;
 }
 
-#controls .text-field{
-    -fx-border-color: red;
+#controls .text-field {
     -fx-highlight-fill: none;
 }
 
@@ -16,7 +15,7 @@
     -fx-highlight-fill: none;
 }
 
-#controls .playerName.active{
+#controls .playerName.active {
     -fx-border-color: red;
 }
 
@@ -33,4 +32,72 @@
 
 .card-1 {
     -fx-image: url("/images/image01.jpg");
+}
+
+.card-2 {
+    -fx-image: url("/images/image02.jpg");
+}
+
+.card-3 {
+    -fx-image: url("/images/image03.jpg");
+}
+
+.card-4 {
+    -fx-image: url("/images/image04.jpg");
+}
+
+.card-5 {
+    -fx-image: url("/images/image05.jpg");
+}
+
+.card-6 {
+    -fx-image: url("/images/image06.jpg");
+}
+
+.card-7 {
+    -fx-image: url("/images/image07.jpg");
+}
+
+.card-8 {
+    -fx-image: url("/images/image08.jpg");
+}
+
+.card-9 {
+    -fx-image: url("/images/image09.jpg");
+}
+
+.card-10 {
+    -fx-image: url("/images/image10.jpg");
+}
+
+.card-11 {
+    -fx-image: url("/images/image11.jpg");
+}
+
+.card-12 {
+    -fx-image: url("/images/image12.jpg");
+}
+
+.card-13 {
+    -fx-image: url("/images/image13.jpg");
+}
+
+.card-14 {
+    -fx-image: url("/images/image14.jpg");
+}
+
+.card-15 {
+    -fx-image: url("/images/image15.jpg");
+}
+
+.card-16 {
+    -fx-image: url("/images/image16.jpg");
+}
+
+.card-17 {
+    -fx-image: url("/images/image17.jpg");
+}
+
+.card-18 {
+    -fx-image: url("/images/image18.jpg");
 }
