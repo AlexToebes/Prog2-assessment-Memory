@@ -1,6 +1,7 @@
 package com.alextoebes.memorygame.model;
 
 import java.util.Observable;
+import java.util.UUID;
 
 public class Card {
 
@@ -17,7 +18,7 @@ public class Card {
         Card[] completeGame = new Card[sets * cardsPerSet];
 
         for (int i = 0; i < sets; i++) {
-            Card[] cardSet = CardSet.getSet(new CardSet(UUIDGenerator.getUUID()), cardsPerSet);
+            Card[] cardSet = CardSet.getSet(new CardSet(UUID.randomUUID().hashCode()), cardsPerSet);
             for (int ii = 0; ii < cardSet.length; ii++) {
                 completeGame[(i * cardsPerSet) + ii] = cardSet[ii];
             }

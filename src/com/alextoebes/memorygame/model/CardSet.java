@@ -4,9 +4,9 @@ import java.util.Observable;
 
 public class CardSet {
 
-    private String uuid;
+    private int uuid;
 
-    public CardSet(String uuid) {
+    public CardSet(int uuid) {
 
         this.uuid = uuid;
     }
