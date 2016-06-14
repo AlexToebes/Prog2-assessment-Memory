@@ -47,8 +47,12 @@ public class BoardController extends Controller {
     }
 
     public void selectCardPane(CardPane cardPane) {
-        System.out.println(board.getStyleClass());
-        System.out.println(cardPane.getWidth() + "x" + cardPane.getHeight());
+        try {
+            ((GameController) getParent()).clickedCard(cardPane);
+            cardPane.showCard(true);
+        } catch (NullPointerException ignored) {
+
+        }
     }
 
     public void addToGrid(CardPane cardPane, int padding) {

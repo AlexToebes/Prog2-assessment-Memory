@@ -24,7 +24,8 @@ public class CardPane extends StackPane {
         this.image.setMouseTransparent(true);
         this.button = new Button();
         this.getChildren().addAll(this.button, this.image);
-        this.image.getStyleClass().add("card-1");
+        this.showCard(false);
+        this.getStyleClass().add("card-1");
     }
 
     public Card getCard() {
@@ -52,5 +53,13 @@ public class CardPane extends StackPane {
 
     public void setOnAction (EventHandler<ActionEvent> e) {
         this.button.setOnAction(e);
+    }
+
+    public void showCard(boolean b) {
+        if (b) {
+            this.image.getStyleClass().removeIf(styleClass -> styleClass.equals("hidden"));
+        } else {
+            this.image.getStyleClass().add("hidden");
+        }
     }
 }

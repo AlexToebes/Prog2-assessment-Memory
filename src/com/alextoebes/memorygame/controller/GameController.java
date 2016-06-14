@@ -21,6 +21,8 @@ public class GameController extends Controller {
     @FXML private ControlsController controlsController;
     private Game game;
 
+    private CardPane selectedCard = null;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         super.initialize(location, resources);
@@ -45,6 +47,18 @@ public class GameController extends Controller {
 
     public void clearGame() {
 
+    }
+
+    public void clickedCard(CardPane cardPane) {
+        if (selectedCard == null) {
+            selectedCard = cardPane;
+        } else {
+            if (selectedCard == cardPane) {
+                throw new NullPointerException("Card clicked twice");
+            }
+            System.out.println("Compare: " + System.identityHashCode(cardPane) + " to: " + System.identityHashCode(selectedCard));
+            selectedCard = null;
+        }
     }
 
     public Game getGame() {
