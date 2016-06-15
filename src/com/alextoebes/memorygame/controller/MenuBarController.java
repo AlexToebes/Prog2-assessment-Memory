@@ -1,12 +1,14 @@
 package com.alextoebes.memorygame.controller;
 
 import com.alextoebes.memorygame.Main;
+import com.alextoebes.memorygame.model.Game;
 import javafx.event.ActionEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
+import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
 
 /**
@@ -28,7 +30,12 @@ public class MenuBarController extends Controller {
         System.out.println("handleLoad");
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(extentionFilter);
-        loadFile(fileChooser.showOpenDialog(stage));
+        try {
+            Game.fromSave(fileChooser.showOpenDialog(stage));
+        } catch (IOException e) {
+            // TODO: 15/06/16 Give error message
+            e.printStackTrace();
+        }
     }
 
     public void handleSave(ActionEvent actionEvent) {
@@ -39,13 +46,5 @@ public class MenuBarController extends Controller {
     public void handleExit(ActionEvent actionEvent) {
         // TODO: 15/06/16 implementation 
         System.out.println("handleExit");
-    }
-
-    private boolean loadFile(File file) {
-        if (file == null) {
-            return false;
-        }
-
-        return true;
     }
 }

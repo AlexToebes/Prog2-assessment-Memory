@@ -30,10 +30,6 @@ public class GameController extends Controller {
         displayGame();
     }
 
-    public void loadGame() {
-        this.game = Game.fromSave();
-    }
-
     public void displayGame() {
         clearGame();
 
