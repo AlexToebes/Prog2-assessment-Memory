@@ -31,6 +31,7 @@ public class GameController extends Controller {
     }
 
     public void startNewGame() {
+        clearGame();
         this.game = new Game();
         displayGame();
     }

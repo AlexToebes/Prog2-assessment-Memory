@@ -14,14 +14,12 @@ public class Card {
         this.cardSet = cardSet;
     }
 
-    public static Card[] getCompleteGame(int sets, int cardsPerSet) {
+    public static Card[] createNewGameCards(int sets, int cardsPerSet) {
         Card[] completeGame = new Card[sets * cardsPerSet];
 
         for (int i = 0; i < sets; i++) {
-            Card[] cardSet = CardSet.getSet(new CardSet(UUID.randomUUID().hashCode()), cardsPerSet);
-            for (int ii = 0; ii < cardSet.length; ii++) {
-                completeGame[(i * cardsPerSet) + ii] = cardSet[ii];
-            }
+            Card[] cardSet = CardSet.createNewCardSetWithCards(cardsPerSet).getCards();
+            System.arraycopy(cardSet, 0, completeGame, i * cardsPerSet, cardSet.length);
         }
 
         return completeGame;
@@ -32,8 +30,7 @@ public class Card {
      * @return
      */
     public CardSet getCardSet() {
-        // TODO implement here
-        return null;
+        return cardSet;
     }
 
 }

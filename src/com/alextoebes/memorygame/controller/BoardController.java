@@ -2,6 +2,7 @@ package com.alextoebes.memorygame.controller;
 
 import com.alextoebes.memorygame.Main;
 import com.alextoebes.memorygame.model.Card;
+import com.alextoebes.memorygame.model.CardSet;
 import com.alextoebes.memorygame.view.CardPane;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -11,6 +12,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -32,8 +34,9 @@ public class BoardController extends Controller {
     }
 
     public void displayBoard() {
-
         Card[] cards = ((GameController) getParent()).getGame().getCards();
+        List<CardSet> cardSets = Arrays.asList(CardSet.getSetsFromCards(cards));
+        cardSets.sort((a,b) -> a.toString().compareTo(b.toString()));
 
         for (Card card : cards) {
             CardPane cardPane = new CardPane(card);
@@ -69,6 +72,4 @@ public class BoardController extends Controller {
             cardPane.setLayoutY(((cardPane.getHeight() + padding.getTop() + padding.getBottom()) * ((i - (i % boardGridColumns)) / boardGridColumns)));
         }
     }
-
-
 }
