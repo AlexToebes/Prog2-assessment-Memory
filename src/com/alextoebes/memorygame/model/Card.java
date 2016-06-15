@@ -1,8 +1,5 @@
 package com.alextoebes.memorygame.model;
 
-import java.util.Observable;
-import java.util.UUID;
-
 public class Card {
 
     private CardSet cardSet;

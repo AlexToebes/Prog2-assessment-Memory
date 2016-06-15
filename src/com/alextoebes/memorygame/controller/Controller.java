@@ -22,5 +22,5 @@ public abstract class Controller implements Initializable {
 
     public Controller getParent() {
         return parent;
-    };
+    }
 }

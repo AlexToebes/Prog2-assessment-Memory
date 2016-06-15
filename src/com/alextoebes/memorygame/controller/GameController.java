@@ -1,14 +1,8 @@
 package com.alextoebes.memorygame.controller;
 
-import com.alextoebes.memorygame.model.Card;
 import com.alextoebes.memorygame.model.Game;
 import com.alextoebes.memorygame.view.CardPane;
 import javafx.fxml.FXML;
-import javafx.scene.Group;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
