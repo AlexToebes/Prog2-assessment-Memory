@@ -23,7 +23,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 600, 750));
         primaryStage.setResizable(false);
         primaryStage.show();
-        this.triggerDocumentReady();
+        this.triggerDocumentReady(primaryStage);
     }
 
 
@@ -35,8 +35,8 @@ public class Main extends Application {
         listenerList.add(listener);
     }
 
-    private void triggerDocumentReady() {
-        ActionEvent event = new ActionEvent(this, UUID.randomUUID().hashCode(), "Document ready");
+    private void triggerDocumentReady(Stage stage) {
+        ActionEvent event = new ActionEvent(stage, UUID.randomUUID().hashCode(), "Document ready");
         for (ActionListener listener:listenerList) {
             listener.actionPerformed(event);
         }
