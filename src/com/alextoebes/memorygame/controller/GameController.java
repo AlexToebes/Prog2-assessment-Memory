@@ -56,8 +56,6 @@ public class GameController extends Controller {
                 throw new NullPointerException("Card clicked twice");
             }
 
-            System.out.println("Compare: " + System.identityHashCode(cardPane.getCard().getCardSet()) + " to: " + System.identityHashCode(selectedCard.getCard().getCardSet()));
-
             if (cardPane.getCard().getCardSet() == selectedCard.getCard().getCardSet()) {
                 CardSet cardSet = cardPane.getCard().getCardSet();
                 game.getTurn().getScore().add(cardSet);
@@ -65,6 +63,8 @@ public class GameController extends Controller {
                 boardController.update();
                 selectedCard = null;
                 clickReady = true;
+                game.nextTurn();
+                controlsController.update();
             } else {
                 CardPane prevSelectedCard = selectedCard;
                 new Thread(() -> {
@@ -75,13 +75,13 @@ public class GameController extends Controller {
                         treadPrevSelectedCard.showCard(false);
                         selectedCard = null;
                         clickReady = true;
+                        game.nextTurn();
+                        controlsController.update();
                     }
                     catch (Exception ignored){
                     }
                 }).start();
             }
-
-
         }
     }
 

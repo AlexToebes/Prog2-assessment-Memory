@@ -116,3 +116,7 @@
 .card-18 .image-view{
     -fx-image: url("/images/image18.jpg");
 }
+
+.active{
+    -fx-border-color: red;
+}

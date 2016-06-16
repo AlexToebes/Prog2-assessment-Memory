@@ -1,9 +1,0 @@
-diff a/src/com/alextoebes/memorygame/controller/GameController.java b/src/com/alextoebes/memorygame/controller/GameController.java	(rejected hunks)
-@@ -50,7 +50,6 @@
-             if (selectedCard == cardPane) {
-                 throw new NullPointerException("Card clicked twice");
-             }
--            System.out.println("Compare: " + System.identityHashCode(cardPane) + " to: " + System.identityHashCode(selectedCard));
-             selectedCard = null;
-         }
-     }

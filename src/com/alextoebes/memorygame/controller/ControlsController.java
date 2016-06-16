@@ -1,5 +1,6 @@
 package com.alextoebes.memorygame.controller;
 
+import com.alextoebes.memorygame.model.Game;
 import com.alextoebes.memorygame.model.Player;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -31,7 +32,15 @@ public class ControlsController extends Controller {
     }
 
     public void update() {
-        player1Field.setText(((GameController) getParent()).getGame().getPlayer(0).getName());
-        player2Field.setText(((GameController) getParent()).getGame().getPlayer(1).getName());
+        Game game = ((GameController) getParent()).getGame();
+        player1Field.setText(game.getPlayer(0).getName());
+        player2Field.setText(game.getPlayer(1).getName());
+        TextField activefield = game.getTurn() == game.getPlayer(0) ? player1Field : player2Field;
+
+
+        player1Field.getStyleClass().removeIf(styleClass -> styleClass.equals("active"));
+        player2Field.getStyleClass().removeIf(styleClass -> styleClass.equals("active"));
+
+        activefield.getStyleClass().add("active");
     }
 }

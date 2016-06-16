@@ -77,15 +77,7 @@ public class Game extends Observable {
     }
 
     public Player nextTurn() {
-        for (int i = 0; i < players.length; i++) {
-            if(players[i] == turn) {
-                if (players[i+1] != null) {
-                    turn = players[i+1];
-                } else {
-                    turn = players[0];
-                }
-            }
-        }
+        turn = players[0] == turn ? players[1] : players[0];
 
         return turn;
     }
