@@ -202,6 +202,7 @@ public class Game extends Observable {
 
             for (int combinedPlayerScoreValue : combinedPlayerScore) {
                 CardSet cardSet = CardSet.createNewCardSetWithCards(Integer.toString(combinedPlayerScoreValue), DEFAULT_CARDS_IN_CARDSET);
+                cardSet.setGuessed(true);
                 cardSets.put(combinedPlayerScoreValue, cardSet);
                 cardSetsAppliedCounter.put(combinedPlayerScoreValue, 0);
                 Collections.addAll(guessedCards, cardSet.getCards());
@@ -227,14 +228,12 @@ public class Game extends Observable {
                         cards[cardsIndex++] = guessedCards.get(0);
                         guessedCards.remove(cards[i]);
                     } else {
+                        Integer setCount = cardSetsAppliedCounter.get(this.gameMap[i][i1]);
                         cards[cardsIndex++] = cardSets.get(
                                 this.gameMap[i][i1]
-                        ).getCards()
-                                [
-                                cardSetsAppliedCounter.get(
-                                        this.gameMap[i][i1]
-                                )
-                                ];
+                        ).getCards()[setCount];
+
+                        cardSetsAppliedCounter.put(this.gameMap[i][i1], setCount+1);
                     }
                 }
             }

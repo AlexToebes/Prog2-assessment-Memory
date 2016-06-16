@@ -61,6 +61,8 @@ public class BoardController extends Controller {
         } catch (NullPointerException ignored) {
 
         }
+
+        //((GameController) getParent()).isFinished();
     }
 
     public void addToGrid(CardPane cardPane, int padding) {
@@ -80,6 +82,7 @@ public class BoardController extends Controller {
             cardPane.setLayoutX(((cardPane.getWidth() + padding.getLeft() + padding.getRight()) * (i % boardGridColumns)));
             cardPane.setLayoutY(((cardPane.getHeight() + padding.getTop() + padding.getBottom()) * ((i - (i % boardGridColumns)) / boardGridColumns)));
         }
+        update();
     }
 
     public void update() {
