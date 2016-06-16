@@ -38,7 +38,7 @@
 }
 
 .card-pane .image-view.hidden {
-    -fx-image: url("/images/reverse.jpg");
+    /*-fx-image: url("/images/reverse.jpg");*/
 }
 
 .card-1 .image-view{

@@ -1,6 +1,6 @@
 package com.alextoebes.memorygame.controller;
 
-import com.alextoebes.memorygame.Main;
+import com.alextoebes.memorygame.DocumentReady;
 import com.alextoebes.memorygame.model.Game;
 import javafx.event.ActionEvent;
 import javafx.stage.FileChooser;
@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
-import java.nio.file.Files;
 import java.util.ResourceBundle;
 
 /**
@@ -22,16 +21,17 @@ public class MenuBarController extends Controller {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         super.initialize(location, resources);
-        Main.onDocumentReady((stage) -> this.stage = (Stage) stage.getSource());
+        DocumentReady.onReady((stage) -> this.stage = (Stage) stage.getSource());
     }
 
     public void handleLoad(ActionEvent actionEvent) {
         // TODO: 15/06/16 implementation
-        System.out.println("handleLoad");
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(extentionFilter);
         try {
-            Game.fromSave(fileChooser.showOpenDialog(stage));
+            GameController gameController = ((ApplicationController) getParent()).gameController;
+            gameController.setGame(Game.fromSave(fileChooser.showOpenDialog(stage)));
+            gameController.displayGame();
         } catch (IOException e) {
             // TODO: 15/06/16 Give error message
             e.printStackTrace();
@@ -40,11 +40,9 @@ public class MenuBarController extends Controller {
 
     public void handleSave(ActionEvent actionEvent) {
         // TODO: 15/06/16 implementation
-        System.out.println("handleSave");
     }
 
     public void handleExit(ActionEvent actionEvent) {
-        // TODO: 15/06/16 implementation 
-        System.out.println("handleExit");
+        // TODO: 15/06/16 implementation
     }
 }
