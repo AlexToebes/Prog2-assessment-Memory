@@ -25,23 +25,22 @@ public class GameController extends Controller {
     }
 
     public void startNewGame() {
-        clearGame();
         this.game = new Game();
         displayGame();
     }
 
-    public void loadGame() {
-        this.game = Game.fromSave();
-    }
-
     public void displayGame() {
         clearGame();
+        boardController.displayBoard();
+    }
 
+    public void displayGame(boolean a) {
+        clearGame();
         boardController.displayBoard();
     }
 
     public void clearGame() {
-
+        boardController.clearBoard();
     }
 
     public void clickedCard(CardPane cardPane) {
@@ -51,12 +50,15 @@ public class GameController extends Controller {
             if (selectedCard == cardPane) {
                 throw new NullPointerException("Card clicked twice");
             }
-            System.out.println("Compare: " + System.identityHashCode(cardPane) + " to: " + System.identityHashCode(selectedCard));
             selectedCard = null;
         }
     }
 
     public Game getGame() {
         return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 }

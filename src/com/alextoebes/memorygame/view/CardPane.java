@@ -17,7 +17,7 @@ public class CardPane extends StackPane {
     private final Button button;
     private Card card;
 
-    public CardPane(Card card) {
+    public CardPane(Card card, int index) {
         this.getStyleClass().add("card-pane");
         this.card = card;
         this.image = new ImageView();
@@ -25,7 +25,7 @@ public class CardPane extends StackPane {
         this.button = new Button();
         this.getChildren().addAll(this.button, this.image);
         this.showCard(false);
-        this.getStyleClass().add("card-1");
+        this.getStyleClass().add("card-" + index);
     }
 
     public Card getCard() {

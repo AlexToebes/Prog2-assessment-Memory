@@ -13,8 +13,10 @@ import java.util.ResourceBundle;
 public class ApplicationController extends Controller {
     @FXML private MenuBar menuBar;
     @FXML private BorderPane game;
-    @FXML private MenuBarController menuBarController;
-    @FXML private GameController gameController;
+    @FXML
+    public MenuBarController menuBarController;
+    @FXML
+    public GameController gameController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -14,7 +14,11 @@ public class CardSet {
     }
 
     public static CardSet createNewCardSetWithCards(int cardAmount) {
-        CardSet cardSet = new CardSet(UUID.randomUUID().toString(), cardAmount);
+        return createNewCardSetWithCards(UUID.randomUUID().toString(), cardAmount);
+    }
+
+    public static CardSet createNewCardSetWithCards(String uuid, int cardAmount) {
+        CardSet cardSet = new CardSet(uuid, cardAmount);
         for (int i = 0; i < cardAmount; i++) {
             cardSet.add(new Card(cardSet));
         }
@@ -33,7 +37,10 @@ public class CardSet {
 
     public static CardSet[] getSetsFromCards(Card[] cards) {
         Set<CardSet> cardSets = new HashSet<>();
-        cardSets.addAll(Arrays.asList(cards).stream().map(Card::getCardSet).collect(Collectors.toList()));
+
+        for (Card card: cards) {
+            cardSets.add(card.getCardSet());
+        }
 
         return cardSets.toArray(new CardSet[cardSets.size()]);
     }
