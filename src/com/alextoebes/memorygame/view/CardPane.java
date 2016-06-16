@@ -26,6 +26,7 @@ public class CardPane extends StackPane {
         this.getChildren().addAll(this.button, this.image);
         this.showCard(false);
         this.getStyleClass().add("card-" + index);
+        this.getStyleClass().add("nocheat");
     }
 
     public Card getCard() {
@@ -56,10 +57,26 @@ public class CardPane extends StackPane {
     }
 
     public void showCard(boolean b) {
+        Thread.currentThread().getStackTrace();
         if (b) {
             this.image.getStyleClass().removeIf(styleClass -> styleClass.equals("hidden"));
         } else {
             this.image.getStyleClass().add("hidden");
+        }
+    }
+
+    public void update(boolean cheatmode) {
+
+        if (!cheatmode) {
+            this.getStyleClass().add("nocheat");
+        } else {
+            this.getStyleClass().removeIf(styleClass -> styleClass.equals("nocheat"));
+        }
+
+        if (card.getCardSet().isGuessed()) {
+            this.getStyleClass().add("guessed");
+        } else {
+            this.getStyleClass().removeIf(styleClass -> styleClass.equals("guessed"));
         }
     }
 }

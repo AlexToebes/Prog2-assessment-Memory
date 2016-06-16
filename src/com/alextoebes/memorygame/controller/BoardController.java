@@ -58,7 +58,6 @@ public class BoardController extends Controller {
     public void selectCardPane(CardPane cardPane) {
         try {
             ((GameController) getParent()).clickedCard(cardPane);
-            cardPane.showCard(true);
         } catch (NullPointerException ignored) {
 
         }
@@ -81,5 +80,20 @@ public class BoardController extends Controller {
             cardPane.setLayoutX(((cardPane.getWidth() + padding.getLeft() + padding.getRight()) * (i % boardGridColumns)));
             cardPane.setLayoutY(((cardPane.getHeight() + padding.getTop() + padding.getBottom()) * ((i - (i % boardGridColumns)) / boardGridColumns)));
         }
+    }
+
+    public void update() {
+        for (Node cardPane : board.getChildren()) {
+            ((CardPane) cardPane).update(cheatMode);
+        }
+    }
+
+    public void setCheatMode(boolean cheatMode) {
+        this.cheatMode = cheatMode;
+        update();
+    }
+
+    public boolean getCheatMode() {
+        return cheatMode;
     }
 }

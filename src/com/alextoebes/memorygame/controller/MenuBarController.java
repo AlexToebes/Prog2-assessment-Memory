@@ -3,6 +3,7 @@ package com.alextoebes.memorygame.controller;
 import com.alextoebes.memorygame.DocumentReady;
 import com.alextoebes.memorygame.model.Game;
 import javafx.event.ActionEvent;
+import javafx.scene.control.CheckMenuItem;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -44,5 +45,9 @@ public class MenuBarController extends Controller {
 
     public void handleExit(ActionEvent actionEvent) {
         // TODO: 15/06/16 implementation
+    }
+
+    public void handleCheatMode(ActionEvent actionEvent) {
+        ((ApplicationController) getParent()).gameController.boardController.setCheatMode(((CheckMenuItem) actionEvent.getSource()).isSelected());
     }
 }

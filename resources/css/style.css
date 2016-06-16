@@ -37,8 +37,12 @@
     -fx-background-color: transparent;
 }
 
-.card-pane .image-view.hidden {
-    /*-fx-image: url("/images/reverse.jpg");*/
+.card-pane.nocheat .image-view.hidden {
+    -fx-image: url("/images/reverse.jpg");
+}
+
+.card-pane.guessed {
+    visibility: hidden;
 }
 
 .card-1 .image-view{

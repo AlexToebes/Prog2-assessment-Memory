@@ -7,6 +7,7 @@ public class CardSet {
 
     private String uuid;
     private Card[] cards;
+    private boolean guessed = false;
 
     public CardSet(String uuid, int size) {
         this.uuid = uuid;
@@ -52,5 +53,13 @@ public class CardSet {
 
     public Card[] getCards() {
         return this.cards;
+    }
+
+    public boolean isGuessed() {
+        return guessed;
+    }
+
+    public void setGuessed(boolean guessed) {
+        this.guessed = guessed;
     }
 }
