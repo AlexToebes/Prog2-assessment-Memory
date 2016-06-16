@@ -34,11 +34,7 @@ public class GameController extends Controller {
     public void displayGame() {
         clearGame();
         boardController.displayBoard();
-    }
-
-    public void displayGame(boolean a) {
-        clearGame();
-        boardController.displayBoard();
+        controlsController.update();
     }
 
     public void clearGame() {

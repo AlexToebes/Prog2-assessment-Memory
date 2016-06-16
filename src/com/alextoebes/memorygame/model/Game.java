@@ -101,6 +101,10 @@ public class Game extends Observable {
         return cards;
     }
 
+    public Player getPlayer(int i) {
+        return this.players[i];
+    }
+
     private static class Parser {
 
         private int[][] gameMap;
